@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
@@ -22,7 +23,7 @@
                 </a>
                 <ul class="nav-list list">
                     <li class="nav-list-item">
-                        <a class="nav-list-link link" href="./index.html">Студия</a>
+                        <a class="nav-list-link link current" href="./index.html">Студия</a>
                     </li>
                     <li class="nav-list-item">
                         <a class="nav-list-link link" href="./portfolio.html">Портфолио</a>
@@ -58,7 +59,7 @@
         <section class="hero">
             <div class="container hero-list">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="hero-button" type="button">Заказать услугу</button>
+                <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
             </div>      
         </section>
 
@@ -107,16 +108,19 @@
                 <h2 class="title">Чем мы занимаемся</h2>
                 <ul class="about-img-list list">
                     <li class="about-img-list-item">
+                        <p class="about-img-overlay">Десктопные приложения</p>
                         <img class="about-img-list-img" src="./images/about-img/about-img-1.jpg" alt="Верстка на таблете" width="370"
                             height="294" />
                     </li>
                     <li class="about-img-list-item">
+                        <p class="about-img-overlay">Мобильные приложения</p>
                         <img class="about-img-list-img" src="./images/about-img/about-img-2.jpg" alt="Инструкция для телефона" width="370"
-                            height="294" />
+                            height="294" />                                                                     
                     </li>
                     <li class="about-img-list-item">
+                        <p class="about-img-overlay">Дизайнерские решения</p>
                         <img class="about-img-list-img" src="./images/about-img/about-img-3.jpg" alt="Выбор цвета на таблете" width="370"
-                            height="294" />
+                            height="294" />                                              
                     </li>
                 </ul>     
             </div>            
@@ -389,5 +393,17 @@
             </div>
         </div>        
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-button" data-modal-close>
+                <svg class="close-button-icon">
+                    <use href="./images/sprite.svg#icon-close-black-18dp"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
+
 </html>
